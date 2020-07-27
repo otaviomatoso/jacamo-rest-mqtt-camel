@@ -1,0 +1,6 @@
+mas main {
+
+    agent alice
+
+    platform: jacamo.rest.JCMRest("--rest-port 8080")
+}
