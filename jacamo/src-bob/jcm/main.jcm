@@ -1,6 +1,6 @@
 mas main {
 
-    agent bob
+    agent bob : src-bob/agt/bob.asl
 
     platform: jacamo.rest.JCMRest("--rest-port 8081")
 }

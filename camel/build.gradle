@@ -10,15 +10,28 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url "http://maven.restlet.com/" }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
-}
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-core
+	compile group: 'org.apache.camel', name: 'camel-core', version: '2.25.2'
 
-test {
-	useJUnitPlatform()
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-spring-boot-starter
+	compile group: 'org.apache.camel', name: 'camel-spring-boot-starter', version: '2.25.2'
+
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-http4
+	compile group: 'org.apache.camel', name: 'camel-http4', version: '2.25.2'
+
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-jetty
+	compile group: 'org.apache.camel', name: 'camel-jetty', version: '2.25.2'
+
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-paho
+	compile group: 'org.apache.camel', name: 'camel-paho-starter', version: '2.25.2'
+
 }
