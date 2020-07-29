@@ -1,7 +1,7 @@
 // JaCaMo-REST: Integration Demo (Node-RED + MQTT)
 
 /* Initial belief */
-topic("mqtt/jacamo/ana"). // ana topic
+topic("mqtt/jacamo/ana"). // ana's topic
 
 /* Initial goal */
 !start.

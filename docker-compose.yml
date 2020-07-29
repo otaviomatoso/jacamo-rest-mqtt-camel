@@ -1,0 +1,50 @@
+################################################################################
+# JaCaMo-REST: Integration Demo (Node-RED + MQTT)
+################################################################################
+# docker-compose up
+################################################################################
+version: "3.7"
+
+services:
+  camel:
+    image: otaviomatoso/spring-boot-camel-demo:0.1
+    hostname: camel
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8090:8090"
+    networks:
+      - jacamo-camel-net
+    volumes:
+      - "./camel:/app"
+
+  ana:
+    image: otaviomatoso/jacamo-rest-demo:0.1
+    hostname: ana
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8080:8080"
+      - "3272:3272"
+      - "3273:3273"
+    networks:
+      - jacamo-camel-net
+    volumes:
+      - "./jacamo/src-ana:/app/src"
+
+  bob:
+    image: otaviomatoso/jacamo-rest-demo:0.1
+    hostname: bob
+    environment:
+      - TZ=America/Sao_Paulo
+    ports:
+      - "8081:8081"
+      - "3275:3272"
+      - "3276:3273"
+    networks:
+      - jacamo-camel-net
+    volumes:
+      - "./jacamo/src-bob:/app/src"
+
+networks:
+  jacamo-camel-net:

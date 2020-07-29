@@ -1,6 +1,6 @@
 mas main {
 
-    agent ana : src-ana/agt/ana.asl
+    agent ana
 
     platform: jacamo.rest.JCMRest("--rest-port 8080")
 }
