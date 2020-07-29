@@ -5,7 +5,7 @@
    June 11, 2020 - 04:20:00
 */
 
-defaultTasks 'alice'
+defaultTasks 'ana'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -28,28 +28,28 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDir 'src-alice/env'
-            srcDir 'src-alice/agt'
-            srcDir 'src-alice/org'
+            srcDir 'src-ana/env'
+            srcDir 'src-ana/agt'
+            srcDir 'src-ana/org'
             srcDir 'src-bob/env'
             srcDir 'src-bob/agt'
             srcDir 'src-bob/org'
         }
         resources {
-            srcDir 'src-alice/resources'
+            srcDir 'src-ana/resources'
             srcDir 'src-bob/resources'
         }
     }
 }
 
-task alice (type: JavaExec, dependsOn: 'classes') {
+task ana (type: JavaExec, dependsOn: 'classes') {
     group      ' JaCaMo'
     description 'runs the JaCaMo platform'
     doFirst {
         mkdir 'log'
     }
     main 'jacamo.infra.JaCaMoLauncher'
-    args 'src-alice/jcm/main.jcm'
+    args 'src-ana/jcm/main.jcm'
     classpath sourceSets.main.runtimeClasspath
 }
 

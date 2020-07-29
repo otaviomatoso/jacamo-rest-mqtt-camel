@@ -1,7 +1,7 @@
 // JaCaMo-REST: Integration Demo (Node-RED + MQTT)
 
 /* Initial belief */
-topic("mqtt/jacamo/alice"). // alice topic
+topic("mqtt/jacamo/ana"). // ana topic
 
 /* Initial goal */
 !start.
@@ -14,7 +14,7 @@ topic("mqtt/jacamo/alice"). // alice topic
 +!send_msg : topic(Topic) // send msg to mqtt broker
   <- .concat("Hi from bob", Msg);
      Publish =.. [publish,[Topic,Msg],[]];
-     .print("Sending a message to the MQTT broker (alice topic) via dummy artifact");
+     .print("Sending a message to the MQTT broker (ana topic) via dummy artifact");
      act(Publish, Res);
   .
 

@@ -1,6 +1,6 @@
 mas main {
 
-    agent alice : src-alice/agt/alice.asl
+    agent ana : src-ana/agt/ana.asl
 
     platform: jacamo.rest.JCMRest("--rest-port 8080")
 }

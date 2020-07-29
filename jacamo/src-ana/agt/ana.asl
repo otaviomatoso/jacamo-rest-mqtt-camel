@@ -7,10 +7,10 @@ topic("mqtt/jacamo/bob"). // bob topic
 !start.
 
 /* Plans */
-+!start <- .print("alice is running").
++!start <- .print("ana is running").
 
-+!send_msg : topic(Topic) // send msg to mqtt broker
-  <- .concat("Hi from alice", Msg);
++!send_msg : topic(Topic)// send msg to mqtt broker
+  <- .concat("Hi from ana", Msg);
      .print("Sending a message to the MQTT broker (bob topic) via dummy agent");
      .send(mqtt, achieve, publish_mqtt(Topic,Msg));
   .

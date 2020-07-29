@@ -34,4 +34,10 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.apache.camel/camel-paho
 	compile group: 'org.apache.camel', name: 'camel-paho-starter', version: '2.25.2'
 
+	// https://mvnrepository.com/artifact/org.apache.camel/camel-jsonpath
+	compile group: 'org.apache.camel', name: 'camel-jsonpath-starter', version: '2.25.2'
+
+	// https://mvnrepository.com/artifact/org.json/json
+  compile group: 'org.json', name: 'json', version: '20180813'
+
 }
