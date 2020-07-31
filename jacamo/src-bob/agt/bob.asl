@@ -1,4 +1,4 @@
-// JaCaMo-REST: Integration Demo (Node-RED + MQTT)
+// JaCaMo-REST: Integration Demo (Camel + MQTT)
 
 /* Initial belief */
 topic("mqtt/jacamo/ana"). // ana's topic

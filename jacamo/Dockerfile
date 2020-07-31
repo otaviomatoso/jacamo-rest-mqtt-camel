@@ -1,10 +1,10 @@
-# JaCaMo-REST: Integration Demo (Node-RED + MQTT)
+# JaCaMo-REST: Integration Demo (Camel + MQTT)
 
 # to build:
 #    ./gradlew clean copyToLib
-#    docker build -t otaviomatoso/jacamo_rest_demo_nodered:0.2 .
+#    docker build -t <image-name> .
 # to run
-#    docker run -it otaviomatoso/jacamo_rest_demo_nodered:0.2
+#    docker run -it <image-name>
 
 FROM alpine
 

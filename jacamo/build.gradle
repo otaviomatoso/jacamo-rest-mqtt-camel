@@ -1,8 +1,8 @@
 /*
-   JaCaMo-REST Demo (Node-RED + MQTT)
+   JaCaMo-REST Demo (Camel+ MQTT)
 
    Gradle build file for JaCaMo Applications
-   June 11, 2020 - 04:20:00
+   July, 2020
 */
 
 defaultTasks 'ana'
