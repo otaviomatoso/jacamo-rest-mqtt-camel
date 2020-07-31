@@ -15,7 +15,7 @@ public class Routes extends RouteBuilder {
     public void configure() throws Exception {
 
 				/**
-				 * URI FOR CREATING DUMMIES ENTITIES
+				 * URI FOR CREATING DUMMY ENTITIES
 				 */
         from("jetty://http://0.0.0.0:8090/demo/dummies")
           .to("direct:createDummyAgent")
